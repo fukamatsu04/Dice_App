@@ -1,10 +1,11 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
   return runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.purple,
         appBar: AppBar(
           titleTextStyle: TextStyle(
             color: Colors.black,
@@ -42,7 +43,7 @@ class _DicePageState extends State<DicePage> {
               child: TextButton(
                 onPressed: () {
                   setState(() {
-                    leftDiceNumber = 5;
+                    leftDiceNumber = Random().nextInt(6) + 1;
                   });
                 },
                 child: Image.asset('images/dice$leftDiceNumber.png'),
@@ -55,7 +56,7 @@ class _DicePageState extends State<DicePage> {
               child: TextButton(
                 onPressed: () {
                   setState(() {
-                    middleDiceNumber = 5;
+                    middleDiceNumber = Random().nextInt(6) + 1;
                   });
                 },
                 child: Image.asset('images/dice$middleDiceNumber.png'),
@@ -68,7 +69,7 @@ class _DicePageState extends State<DicePage> {
               child: TextButton(
                 onPressed: () {
                   setState(() {
-                    rightDiceNumber = 5;
+                    rightDiceNumber = Random().nextInt(6) + 1;
                   });
                 },
                 child: Image.asset('images/dice$rightDiceNumber.png'),
